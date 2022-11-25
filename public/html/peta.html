@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peta Air</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../res/icon.jpg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="dark:bg-slate-800 overflow-x-hidden overflow">
+    <div class="container">
+        <header class="w-screen h-14 fixed z-20 dark:bg-slate-900 bg-slate-50 shadow-md flex gap-2 px-3">
+            <button role="button" id="button_list_sidebar" class="sm:hidden">
+                <i id="icon_list_sidebar" class="bi bi-list text-3xl self-center dark:text-slate-300"></i>
+            </button>
+
+            <div class="flex gap-2 sm:ml-52">
+                <img src="../../res/logo-navbar.png" alt="logo_unsri" class="w-8 h-8  self-center dark:hidden" />
+                <h1 class="h-fit font-inter font-bold self-center dark:font-semibold dark:text-slate-300">
+                    Tirta <span class="text-sky-600 dark:text-sky-500">Musi</span>
+                </h1>
+            </div>
+
+            <div class="gap-3 sm:gap-4 self-center ml-auto mr-4 md:mr-10 ">
+                <h2 class="text-sm font-semibold font-inter">22:43</h2>
+            </div>
+        </header>
+
+        <nav id="sidebar"
+            class="bg-slate-50 z-20 top-14 sm:top-0 dark:bg-slate-900 w-2/5 sm:w-52 shadow-xl h-screen fixed sm:ml-0 transition-all duration-200 -ml-96">
+            <section class="bg-sky-600 dark:bg-sky-900 mb-1 p-3 shadow-md">
+                <img src="../../res/profil_image.jpg" alt="profil_image"
+                    class="xl:w-20 xl:h-20 w-16 h-16 mb-2 rounded-full shadow-lg self-center mx-auto " />
+                <h2 class="text-center font-medium font-inter text-white text-base sm:text-[18px] dark:text-slate-200">
+                    Taufik
+                </h2>
+                <p class="-mt-2 text-center text-sm sm:text-base text-slate-50 font-light dark:text-slate-300">
+                    19246284299
+                </p>
+            </section>
+
+            <section class="flex gap-2 justify-center mt-3 mb-2">
+                <i class="icon-terang bi bi-brightness-low text-sky-500 text-xl"></i>
+                <div
+                    class="toggle-dark-mode w-10 h-5 self-center shadow-md rounded-full  bg-slate-200 dark:bg-sky-900 cursor-pointer p-1">
+                    <div class="h-full w-4 bg-slate-50 dark:bg-slate-300 rounded-full">
+
+                    </div>
+                </div>
+                <i class="icon-gelap bi bi-moon-stars text-slate-400  self-center"></i>
+            </section>
+
+
+            <div class="px-2 py-2">
+                <ul class="text-left text-slate-800 dark:text-slate-400 font-nunito font-medium leading-6 text-sm">
+                    <li
+                        class="cursor-pointer hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900 dark:hover:text-slate-300  hover:p-1 font-semibold ">
+                        <a href="home.html"><i class="bi bi-house-door-fill"></i> Halaman Depan</a>
+
+                    </li>
+                    <li
+                        class="hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900 dark:hover:text-slate-300  hover:p-1 font-semibold cursor-pointer ">
+                        <a href="data.html"><i class="bi bi-person-fill"></i> Data Pelanggan</a>
+                    </li>
+                    <li class="cursor-pointer text-sky-600 font-semibold">
+                        <i class="bi bi-geo-alt-fill"></i> Peta Air
+                    </li>
+                    <li
+                        class="cursor-pointer hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900 dark:hover:text-slate-300  hover:p-1">
+                        <a href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="text-center text-[9px] dark:text-gray-500 text-gray-400 absolute bottom-3 px-3 w-full">
+                <p> Tirta Musi 2022</p>
+            </div>
+        </nav>
+
+        <main class="w-screen top-14 relative sm:ml-52 p-5 lg:w-2/3 sm:w-fit">
+            <h1 class="text-inter font-bold text-xl sm:text-2xl mb-4 dark:text-slate-300">Peta Sebaran Air <span
+                    class="text-yellow-500">Palembang</span></h1>
+
+            <section id="map" class="w-full h-fit">
+                <img src="../../res/map.png" alt="map" class="shadow-md">
+            </section>
+
+            <section class="bg-white dark:bg-slate-900 p-3 shadow-md h-fit mt-3 w--full overflow-x-auto lg:self-center">
+
+                <h3
+                    class="text-inter font-semibold text-sm sm:text-base mb-1 text-red-900 dark:text-sky-700 self-center">
+                    Jadwal Air per Daerah
+                </h3>
+
+                <p class="text-inter font-normal text-[10px] sm:text-xs mb-3 text-slate-400 dark:text-sky-700 self-center">Daerah anda : Bukit Besar</p>
+
+                <table
+                    class="border-collapse text-center table-auto sm:text-sm text-xs text-slate-700 dark:text-slate-400 font-nunito w-full mb-2">
+                    <thead class="border-b border-slate-400">
+                        <tr>
+                            <td class="px-2 py-2 font-bold">No.</td>
+                            <td class="font-bold">Daerah</td>
+                            <td class="font-bold">Nyala</td>
+                            <td class="font-bold pl-2">Mati</td>
+                            <td class="font-bold pl-2">Status</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="bg-sky-50 dark:bg-slate-800 font-bold">
+                            <td class="px-2 py-2">1</td>
+                            <td class="">Bukit Besar</td>
+                            <td class="pl-2">15.30</td>
+                            <td>21.00</td>
+                            <td class="pl-2 text-red-700">Mati</td>
+                        </tr>
+                        <tr >
+                            <td class="px-2 py-2">2</td>
+                            <td>Veteran</td>
+                            <td class="pl-2">01.00</td>
+                            <td>23.00</td>
+                            <td class="pl-2 text-green-500">Hidup</td>
+                        </tr>
+                        <tr class="bg-sky-50 dark:bg-slate-800">
+                            <td class="px-2 py-2">3</td>
+                            <td>Kalidoni</td>
+                            <td class="pl-2">03.30</td>
+                            <td>23.00</td>
+                            <td class="pl-2 text-green-500">Hidup</td>
+                        </tr>
+                        <tr >
+                            <td class="px-2 py-2">4</td>
+                            <td>Plaju</td>
+                            <td class="pl-2">11.30</td>
+                            <td>20.00</td>
+                            <td class="pl-2 text-red-700">Mati</td>
+                        </tr>
+                        <tr class="bg-sky-50 dark:bg-slate-800">
+                            <td class="px-2 py-2">5</td>
+                            <td>Kenten</td>
+                            <td class="pl-2">03.30</td>
+                            <td>23.00</td>
+                            <td class="pl-2 text-green-500">Hidup</td>
+                        </tr>
+                        <tr>
+                            <td class="px-2 py-2">6</td>
+                            <td>Kertapati</td>
+                            <td class="pl-2">03.30</td>
+                            <td>23.00</td>
+                            <td class="pl-2 text-green-500">Hidup</td>
+                        </tr>
+                        <tr class="bg-sky-50 dark:bg-slate-800">
+                            <td class="px-2 py-2">7</td>
+                            <td>Karya Jaya</td>
+                            <td class="pl-2">03.30</td>
+                            <td>23.00</td>
+                            <td class="pl-2 text-green-500">Hidup</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+<script src="../../public/js/script.js"></script>
+
+</html>
